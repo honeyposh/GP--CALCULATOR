@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>Gp Calculator</h1>
+		<div class="form-row">
+		<input type="text" placeholder="Course Code"  id="course-code" class="form-control">
+		<input type="number" placeholder="Unit Load"  id="unit" min="1" max="5" class="form-control">
+		<input type="number" class="form-control" placeholder="Score"  id="score" onchange="displayPointFronUnitAndScore()">
+		<input type="text"  id="grade" placeholder="Grade"  class="form-control">
+		<input type="number" placeholder="Point" id="point" class="form-control">
+		<input type="button" value="ADD" id="add">
+	</div>
+</div>
+	<table class="tab display-none" id="table">
+		<tr>
+				<th >Course Code</th>
+				<th >Unit Load</th>
+				<th >Score</th>
+				<th >Grade</th>
+				<th >Point</th>
+			</tr>
+		<tbody id="tbody">
+			
+		</tbody>
+
+	</table>
+	<div class="calculation ">
+	<input type="button" value="Calc Gp" class="calc display-none" id="calc-gp" onclick="calculate()">
+	<p id="gpa"></p>
+	<p id="points"></p>
+	<p id="units"></p>
+	<input type="button" value="Clear" class="clear display-none" id="clear">
+	</div>
+<script src="main.js"></script>
+</body>
+</html>
